@@ -1,0 +1,16 @@
+/* Rates.module.css */
+.ratesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ratesTable th,
+.ratesTable td {
+  padding: 12px;
+  border: 1px solid #ddd; /* Add borders */
+}
+
+.ratesTable th {
+  background-color: #f2f2f2; /* Add background color to header */
+  text-align: left;
+}

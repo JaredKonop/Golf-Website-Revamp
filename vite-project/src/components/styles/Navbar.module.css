@@ -1,0 +1,126 @@
+/* Navbar.module.css */
+
+.navbar {
+  font-family: Garamond, serif;
+  background: #33333323;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%;
+  max-width: 1000px; */
+  padding: 0 24px;
+  position: relative; /* Allow absolute positioning of the menu icon */
+}
+
+.navTitle {
+  display: none; /* Hide the title by default */
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute; /* Position it absolutely to center it with menu icon */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menuIcon {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-size: 1.8rem;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin: 0; /* Ensure no default margins */
+}
+
+.navItem {
+  height: 80px;
+}
+
+.navLinks {
+  color: rgb(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navLinks:hover {
+  border-bottom: 3px solid #01bf71;
+}
+
+@media screen and (max-width: 768px) {
+  .menuIcon {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    position: fixed; /* Ensure it stays fixed even when scrolling */
+    top: 20px;
+    left: 24px;
+    z-index: 1100; /* Ensure it appears above the sidebar */
+    font-size: 1.8rem;
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Positioning to the left */
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #33333323;
+    padding-top: 80px; /* Ensure it starts below the navbar */
+    z-index: 1000; /* Ensure it appears below the menu icon */
+  }
+
+  .navMenu.active {
+    left: 0; /* Bring the menu into view */
+    transition: all 0.5s ease;
+  }
+
+  .navTitle {
+    display: flex; /* Show the title when the screen width is less than 768px */
+    position: fixed;
+  }
+  .navItem {
+    width: 100%;
+  }
+
+  .navLinks {
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    width: 100%;
+    display: block;
+  }
+
+  .navLinks:hover {
+    background-color: #1888ff;
+    height: 5%;
+    border-radius: 0;
+  }
+}
