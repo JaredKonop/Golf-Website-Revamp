@@ -1,19 +1,16 @@
 import React from "react";
-import styles from "../components/styles/Rates.module.css"; // Import CSS module for custom styling
+import styles from "../components/styles/Rates.module.css";
 
 const Rates: React.FC = () => {
   return (
     <div>
       <h1>Rates</h1>
       <table className={styles.ratesTable}>
-        {" "}
-        {/* Apply custom styling */}
         <thead>
           <tr>
             <th>Category</th>
             <th>Weekdays</th>
             <th>Weekend/Holidays</th>
-            <th>Cart Rental</th>
           </tr>
         </thead>
         <tbody>
@@ -25,7 +22,6 @@ const Rates: React.FC = () => {
             <td>
               $17.00 (9 Holes) <br /> $8.00 (2nd Nine)
             </td>
-            <td>-</td>
           </tr>
           <tr>
             <td>Seniors</td>
@@ -35,7 +31,6 @@ const Rates: React.FC = () => {
             <td>
               $14.00 (9 Holes) <br /> $8.00 (2nd Nine)
             </td>
-            <td>-</td>
           </tr>
           <tr>
             <td>Juniors</td>
@@ -45,7 +40,6 @@ const Rates: React.FC = () => {
             <td>
               $14.00 (9 Holes) <br /> $8.00 (2nd Nine)
             </td>
-            <td>-</td>
           </tr>
           <tr>
             <td>Golf Cart Rental per person</td>
@@ -55,7 +49,6 @@ const Rates: React.FC = () => {
             <td>
               $12.00 (9 Holes) <br /> $8.00 (2nd Nine)
             </td>
-            <td>-</td>
           </tr>
           <tr>
             <td>Golf Cart Rental single rider</td>
@@ -65,13 +58,11 @@ const Rates: React.FC = () => {
             <td>
               $15.00 (9 Holes) <br /> $8.00 (2nd Nine)
             </td>
-            <td>-</td>
           </tr>
           <tr>
             <td>Pull Cart Rental</td>
             <td>$3.00 (9 Holes)</td>
             <td>N/A</td>
-            <td>-</td>
           </tr>
         </tbody>
       </table>

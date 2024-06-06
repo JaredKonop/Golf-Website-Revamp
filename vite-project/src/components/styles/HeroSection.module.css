@@ -1,0 +1,18 @@
+.heroContainer {
+  background-image: url("../../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 100vw; /* Ensure full width coverage */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  box-sizing: border-box;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+}
