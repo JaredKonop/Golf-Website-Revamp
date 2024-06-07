@@ -15,4 +15,20 @@ body {
   background-size: cover;
   /* Make sure the background stays fixed while scrolling */
   background-attachment: fixed;
+
+  margin: 0;
+  padding-bottom: 80px; /* Adjust based on the actual height of the footer */
+}
+
+/* Ensure the app container takes the full height of the viewport */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure the main content area takes up the remaining space */
+.main-content {
+  flex: 1;
+  margin-top: 30%; /* Height of the navbar */
 }

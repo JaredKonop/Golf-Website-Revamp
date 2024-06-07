@@ -1,10 +1,60 @@
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2%;
+  padding-left: 2%;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.leftFooter {
+  flex: 1;
+  text-align: left;
+}
+
+.rightFooter {
+  flex: 2;
+  text-align: right;
+  margin-right: 5%;
+}
+
+.socialContainer {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.socialIcon {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  color: #3b5998; /* Facebook blue */
+}
+
+/* Add media query to handle smaller screens */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leftFooter,
+  .rightFooter {
+    text-align: left;
+    flex: unset;
+    margin-bottom: 10px;
+  }
+
+  .rightFooter {
+    text-align: left;
+  }
 }

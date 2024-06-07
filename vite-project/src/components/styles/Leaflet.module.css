@@ -2,4 +2,5 @@
 .map {
   height: 400px; /* Set the height of the map container */
   width: 100%; /* Set the width to fill the parent container */
+  z-index: 0;
 }
