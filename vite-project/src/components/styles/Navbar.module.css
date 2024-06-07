@@ -67,6 +67,7 @@
 
 .navLinks:hover {
   border-bottom: 3px solid #01bf71;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -124,8 +125,9 @@
   }
 
   .navLinks:hover {
-    background-color: #1888ff;
     height: 5%;
     border-radius: 0;
+    border-bottom: 0px;
+    color: black;
   }
 }

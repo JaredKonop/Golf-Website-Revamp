@@ -6,6 +6,7 @@ const ContactUs: React.FC = () => {
   return (
     <div className={styles.contactUsContainer}>
       <div className={styles.section}>
+        <h1>Contact Us</h1>
         <h2>Book a Tee Time</h2>
         <p>
           Call us at <strong>412-364-2447</strong> to schedule your tee time.

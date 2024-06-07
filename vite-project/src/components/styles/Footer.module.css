@@ -9,6 +9,15 @@
   left: 0;
 }
 
+.footer a {
+  color: rgb(0, 204, 255);
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: rgb(162, 244, 255);
+  font-weight: 600;
+}
 /* .leftFooter {
   flex: 1;
   text-align: left;

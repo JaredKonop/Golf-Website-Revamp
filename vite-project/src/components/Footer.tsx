@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <p>
         &copy; 2024
         <a
-          href="https://github.com/Jared-Konop"
+          href="https://github.com/JaredKonop"
           target="_blank"
           rel="noopener noreferrer"
         >

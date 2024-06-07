@@ -6,7 +6,8 @@ const BookTeeTime: React.FC = () => {
   return (
     <div className={styles.bookTeeTimeContainer}>
       <div className={styles.section}>
-        <h2>Book a Tee Time</h2>
+        <h1>Book a Tee Time</h1>
+        <h2>Tee Time</h2>
         <p>
           Call us at <strong>412-364-2447</strong> to schedule your tee time.
         </p>

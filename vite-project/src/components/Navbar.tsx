@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className={styles.navItem}>
             <Link to="/book-tee-time" className={styles.navLinks}>
-              Book a Tee Time
+              Tee Time
             </Link>
           </li>
           <li className={styles.navItem}>

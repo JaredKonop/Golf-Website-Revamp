@@ -1,0 +1,52 @@
+/* GolfPriceCalculator.css */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+select {
+  cursor: pointer;
+}
+
+select:focus,
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+h3 {
+  text-align: center;
+  color: #00ff15af;
+  margin-top: 20px;
+}
+
+.divider {
+  margin: 20px 0;
+  height: 1px;
+  background: #ddd;
+}

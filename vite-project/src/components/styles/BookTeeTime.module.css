@@ -1,9 +1,25 @@
 /* BookTeeTime.module.css */
 .bookTeeTimeContainer {
-  padding: 20px;
-  background-color: #000000;
+  margin: 0 auto;
+  margin-top: 5%;
 }
 
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: #11af88;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.section strong {
+  font-weight: bold;
+  color: #000; /* Customize strong text color */
 }

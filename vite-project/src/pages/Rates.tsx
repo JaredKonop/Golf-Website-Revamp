@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../components/styles/Rates.module.css";
+import GolfPriceCalculator from "../components/GolfPriceCalculator";
 
 const Rates: React.FC = () => {
   return (
@@ -68,6 +69,7 @@ const Rates: React.FC = () => {
           </tbody>
         </table>
       </div>
+      <GolfPriceCalculator />
     </div>
   );
 };
