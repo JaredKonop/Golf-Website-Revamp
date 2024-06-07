@@ -8,7 +8,7 @@ body {
   /* Set background to dark color */
   background-color: #f0e6bb;
   /* Create radial gradient */
-  background-image: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  background-image: url(../src/assets/bg3.png);
   /* Center the gradient */
   background-position: center;
   /* Ensure the gradient covers the entire viewport */
@@ -17,18 +17,18 @@ body {
   background-attachment: fixed;
 
   margin: 0;
-  padding-bottom: 80px; /* Adjust based on the actual height of the footer */
 }
 
-/* Ensure the app container takes the full height of the viewport */
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* Ensure the App component spans the full width */
 }
 
-/* Ensure the main content area takes up the remaining space */
 .main-content {
   flex: 1;
-  margin-top: 30%; /* Height of the navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

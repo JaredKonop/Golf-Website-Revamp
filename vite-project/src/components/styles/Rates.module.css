@@ -1,23 +1,36 @@
 /* Rates.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  margin-top: 5%;
+}
+
+.content {
+  flex: 1;
+}
+
 .ratesTable {
   width: 100%;
   border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 .ratesTable th,
 .ratesTable td {
   padding: 12px;
-  border: 1px solid #ddd; /* Add borders */
+  border: 1px solid #000000; /* Add borders */
 }
 
 .ratesTable th {
-  background-color: #f2f2f2; /* Add background color to header */
+  background-color: #ff0000; /* Add background color to header */
   text-align: left;
 }
 
 @media screen and (max-width: 768px) {
   .ratesTable {
-    width: 20%;
+    width: 15%;
     margin: 0 auto; /* Center horizontally */
     border-collapse: collapse;
   }
@@ -25,11 +38,11 @@
   .ratesTable th,
   .ratesTable td {
     padding: 2%;
-    border: 1% solid #ddd; /* Add borders */
+    border: 1px solid #000000; /* Add borders */
   }
 
   .ratesTable th {
-    background-color: #f2f2f2; /* Add background color to header */
+    background-color: #ff0000; /* Add background color to header */
     text-align: left;
   }
 }
