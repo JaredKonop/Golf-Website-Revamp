@@ -7,3 +7,9 @@
 .content {
   flex: 1;
 }
+
+.slogan p {
+  font-family: "Lobster", cursive;
+  color: blue;
+  font-size: 2rem;
+}

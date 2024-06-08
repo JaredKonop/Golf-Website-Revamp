@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../components/styles/ContactUs.module.css"; // Import CSS module for custom styling
 import LeafletMap from "../components/LeafletMap";
+import FacebookPage from "../components/FacebookPage";
 
 const ContactUs: React.FC = () => {
   return (
@@ -38,6 +39,10 @@ const ContactUs: React.FC = () => {
         <button>Directions</button>
       </a>
       <LeafletMap /> {/* Add the LeafletMap component here */}
+      <div className={styles.facebook}>
+        <h2>Join our Facebook!</h2>
+        <FacebookPage />
+      </div>
     </div>
   );
 };
