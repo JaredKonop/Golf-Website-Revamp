@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../components/styles/CourseDetails.module.css";
 import sc from "../assets/Scorecard.jpg";
+import InteractiveScorecard from "../components/InteractiveScorecard";
 
 const CourseDetails: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const CourseDetails: React.FC = () => {
         <h1>Course Details</h1>
         <h2>Scorecard</h2>
         <img src={sc}></img>
+        <InteractiveScorecard />
         <h2>History</h2>
         <p>
           The first round of golf at Clover Hill Golf Course happened on April

@@ -4,3 +4,14 @@
   width: 100%; /* Set the width to fill the parent container */
   z-index: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .map {
+    height: 200px;
+    width: 50%;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
