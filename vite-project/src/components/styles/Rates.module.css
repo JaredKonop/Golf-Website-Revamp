@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10% 15%;
+  margin: 5% 15%;
 }
 
 .row {
@@ -49,7 +49,7 @@ h1 {
 
 .ratesTable th {
   background-color: #d91f2a; /* Add background color to header */
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

@@ -2,7 +2,7 @@
 .contactUsContainer {
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin: 5% 15%;
 }
 
 .section {
@@ -11,13 +11,14 @@
 
 .section h2 {
   color: #01bf71;
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .section p {
   color: #ffffff;
   line-height: 1.6;
+  font-size: 1.5rem;
 }
 
 .section a {
@@ -32,5 +33,7 @@
 }
 
 .facebook {
-  margin-top: 10%;
+  margin-top: 5%;
+  color: #01bf71;
+  font-size: 2rem;
 }

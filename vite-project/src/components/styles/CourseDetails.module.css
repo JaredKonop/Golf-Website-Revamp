@@ -2,15 +2,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 10% 15%;
+  margin: 5% 15%;
 }
 
 .content {
   flex: 1;
 }
 
-.content h1 {
-  padding-bottom: 10%;
+.content p {
+  font-size: 1.5rem;
 }
 
 img {
