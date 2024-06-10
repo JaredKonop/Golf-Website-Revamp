@@ -26,7 +26,7 @@
   margin: 20px 0; /* Some top and bottom margin */
   cursor: pointer; /* Pointer/hand icon */
   border-radius: 8px; /* Rounded corners */
-  font-family: "Lobster", cursive;
+  /* font-family: "Lobster", cursive; */
 }
 
 .button:hover {
