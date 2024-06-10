@@ -1,16 +1,48 @@
-/* Rates.module.css */
+/* Rates.module.css
 .container {
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
+  /* min-height: 100vh; 
   margin-top: 5%;
   color: #f39c12;
 }
-
+ 
 .content {
   flex: 1;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.centered {
+  margin-bottom: 20px; /* Adjust as needed */
+  margin-top: 15%;
+}
+
+.left,
+.right {
+  width: calc(50% - 10px); /* Adjust the width and margin as needed */
+}
+
+.content {
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.calc {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 5%;
+}
 .ratesTable {
   width: 100%;
   border-collapse: collapse;
@@ -24,14 +56,28 @@
   border: 1px solid #000000; /* Add borders */
 }
 
+h1 {
+  color: #d91f2a;
+}
+
 .ratesTable th {
-  background-color: #ff0000; /* Add background color to header */
+  background-color: #d91f2a; /* Add background color to header */
   text-align: left;
 }
 
 @media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .left,
+  .right {
+    width: calc(50% - 10px); /* Adjust the width and margin as needed */
+  /* } */
+
   .ratesTable {
-    width: 15%;
+    width: 55%;
     margin: 0 auto; /* Center horizontally */
     border-collapse: collapse;
   }
@@ -43,7 +89,7 @@
   }
 
   .ratesTable th {
-    background-color: #ff0000; /* Add background color to header */
+    background-color: #d91f2a; /* Add background color to header */
     text-align: left;
   }
 }
