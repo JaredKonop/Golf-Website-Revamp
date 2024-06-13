@@ -2,25 +2,21 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles/BusinessHours.module.css";
 
 const BusinessHours: React.FC = () => {
-  const [open, setOpen] = useState("7:30 am");
-  const [close, setClose] = useState("6:00 pm");
-  const [mOpen, setMOpen] = useState<number>(0);
-  const [mClose, setMClose] = useState<number>(0);
+  const [open] = useState("7:30 am");
+  const [close] = useState("6:00 pm");
   const [status, setStatus] = useState<string>("");
 
   useEffect(() => {
     const updateStatus = () => {
       const military = 1200;
       const sClose = close.replace(/\D/g, "");
-      const closeTime = parseInt(sClose, 10) + military;
-      setMClose(closeTime);
+      const mClose = parseInt(sClose, 10) + military;
 
       const sOpen = open.replace(/\D/g, "");
-      let openTime = parseInt(sOpen, 10);
-      if (openTime < 1000) {
-        openTime = parseInt("0" + sOpen, 10);
+      let mOpen = parseInt(sOpen, 10);
+      if (mOpen < 1000) {
+        mOpen = parseInt("0" + sOpen, 10);
       }
-      setMOpen(openTime);
 
       const now = new Date();
       const hour = now.getHours();
@@ -30,7 +26,7 @@ const BusinessHours: React.FC = () => {
         10
       );
 
-      if (currentTime >= openTime && currentTime < closeTime) {
+      if (currentTime >= mOpen && currentTime < mClose) {
         setStatus("Yes, We're Open");
       } else {
         setStatus("Sorry, We're Closed");
