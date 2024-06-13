@@ -12,34 +12,28 @@ const BusinessHours: React.FC = () => {
     const updateStatus = () => {
       const military = 1200;
       const sClose = close.replace(/\D/g, "");
-      const mClose = parseInt(sClose, 10) + military;
-      setMClose(mClose);
+      const closeTime = parseInt(sClose, 10) + military;
+      setMClose(closeTime);
+
       const sOpen = open.replace(/\D/g, "");
-      let mOpen = parseInt(sOpen, 10);
-      if (mOpen < 1000) {
-        mOpen = parseInt("0" + sOpen, 10);
+      let openTime = parseInt(sOpen, 10);
+      if (openTime < 1000) {
+        openTime = parseInt("0" + sOpen, 10);
       }
-      setMOpen(mOpen);
+      setMOpen(openTime);
 
       const now = new Date();
       const hour = now.getHours();
-      let mHour;
-      if (hour >= 10) {
-        mHour = hour;
-      } else {
-        mHour = "0" + hour;
-      }
-
       const minute = now.getMinutes();
-      const time = parseInt(
-        "" + mHour + (minute < 10 ? "0" + minute : minute),
+      const currentTime = parseInt(
+        `${hour < 10 ? "0" : ""}${hour}${minute < 10 ? "0" : ""}${minute}`,
         10
       );
 
-      if (time >= mOpen && time < mClose) {
+      if (currentTime >= openTime && currentTime < closeTime) {
         setStatus("Yes, We're Open");
       } else {
-        setStatus("Sorry We're Closed");
+        setStatus("Sorry, We're Closed");
       }
     };
 
@@ -55,7 +49,9 @@ const BusinessHours: React.FC = () => {
 
   return (
     <div>
-      <div className={status === "Yes, We're Open" ? "open" : "closed"}>
+      <div
+        className={status === "Yes, We're Open" ? styles.open : styles.closed}
+      >
         <p className={styles.status}>{status}</p>
       </div>
       <p className={styles.date}>Open 7 Days a week</p>
