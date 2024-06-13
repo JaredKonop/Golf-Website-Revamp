@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "../components/styles/CourseDetails.module.css";
 import sc from "../assets/Scorecard.jpg";
 import InteractiveScorecard from "../components/InteractiveScorecard";
