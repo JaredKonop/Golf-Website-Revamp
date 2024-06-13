@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../components/styles/InteractiveScorecard.css"; // Import your CSS file for styling
 
 const InteractiveScorecard: React.FC = () => {
