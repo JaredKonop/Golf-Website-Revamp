@@ -38,7 +38,8 @@ h1 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    padding-top: 15%;
   }
 }
 
@@ -73,6 +74,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #01bf71;
   }
 }

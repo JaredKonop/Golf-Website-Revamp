@@ -18,9 +18,12 @@
 
 .left,
 .right {
-  width: calc(50% - 10px); /* Adjust the width and margin as needed */
+  width: calc(100% - 10px); /* Adjust the width and margin as needed */
 }
 
+.right {
+  padding-left: 5%;
+}
 .content {
   margin: 0 auto; /* Center the content horizontally */
 }
@@ -59,7 +62,7 @@ h1 {
 
   .row {
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
   }
 
   /* .left,

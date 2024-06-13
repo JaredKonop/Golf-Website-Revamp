@@ -18,6 +18,9 @@ const WeatherWidget: React.FC = () => {
         script.id = id;
         script.async = true;
         script.onload = callback || (() => {});
+        script.onerror = () => {
+          console.error(`Failed to load script: ${src}`);
+        };
         document.body.appendChild(script);
       } else if (callback) {
         callback();
@@ -26,7 +29,10 @@ const WeatherWidget: React.FC = () => {
 
     // Initialize the widget
     const initializeWidget = () => {
-      window.myWidgetParam = window.myWidgetParam || [];
+      console.log("Initializing widget");
+      if (!window.myWidgetParam) {
+        window.myWidgetParam = [];
+      }
       window.myWidgetParam.push({
         id: 1,
         cityid: "5206379", // Pittsburgh city ID
@@ -34,23 +40,49 @@ const WeatherWidget: React.FC = () => {
         units: "imperial",
         containerid: "openweathermap-widget-1",
       });
+      console.log("Widget parameters:", window.myWidgetParam);
       if (window.myWidgetInit) {
-        window.myWidgetInit();
+        try {
+          window.myWidgetInit();
+        } catch (error) {
+          console.error("Error during widget initialization:", error);
+        }
+      } else {
+        console.error("Widget initialization function not found");
+      }
+    };
+
+    // Ensure the container exists and retry initialization if necessary
+    const retryInitializeWidget = (retries: number) => {
+      if (retries <= 0) {
+        console.error("Widget initialization failed after retries");
+        return;
+      }
+      const container = document.getElementById("openweathermap-widget-1");
+      if (container && window.myWidgetInit) {
+        initializeWidget();
+      } else {
+        console.log(
+          `Retrying widget initialization, attempts left: ${retries}`
+        );
+        setTimeout(() => retryInitializeWidget(retries - 1), 1000);
       }
     };
 
     // Load the necessary scripts and initialize the widget
-    loadScript(
-      "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js",
-      "d3-script",
-      () => {
-        loadScript(
-          "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js",
-          "openweathermap-widget-script",
-          initializeWidget
-        );
-      }
-    );
+    document.addEventListener("DOMContentLoaded", () => {
+      loadScript(
+        "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js",
+        "d3-script",
+        () => {
+          loadScript(
+            "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js",
+            "openweathermap-widget-script",
+            () => retryInitializeWidget(20) // Retry up to 20 times
+          );
+        }
+      );
+    });
 
     // Cleanup function to reset widget parameters if necessary
     return () => {

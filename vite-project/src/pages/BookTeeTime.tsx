@@ -11,8 +11,8 @@ const BookTeeTime: React.FC = () => {
         <p>
           Call us at <strong>412-364-2447</strong> to schedule your tee time.
         </p>
+        <WeatherWidget />
       </div>
-      <WeatherWidget /> {/* Add the WeatherWidget component here */}
     </div>
   );
 };
